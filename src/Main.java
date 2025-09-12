@@ -155,4 +155,15 @@ public class Main {
         }
         else System.out.println(BOOK_EMPTY);
     }
+
+	private static void getName(Scanner in, ContactBook cBook) {
+        int number;
+        number = in.nextInt();
+        if (cBook.hasNumber(number)) {
+            Contact c = cBook.getName(number);
+            System.out.println(c.getName() + "; " + c.getEmail() + "; " + c.getPhone());
+        }
+        else System.out.println("Phone number does not exist.");
+    }
+
 }
