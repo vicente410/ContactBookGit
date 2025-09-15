@@ -164,7 +164,7 @@ public class Main {
         in.nextLine();
         if (cBook.hasNumber(number)) {
             Contact c = cBook.getName(number);
-            System.out.println(c.getName() + "; " + c.getEmail() + "; " + c.getPhone());
+            System.out.println(c.getName());
         }
         else System.out.println(PHONE_NOT_EXIST);
     }
