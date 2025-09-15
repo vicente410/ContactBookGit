@@ -113,9 +113,10 @@ public class ContactBook {
     }
 
     public boolean checkSameContact() {
-        for(int i=0;i<contacts.length;i++){
+        if(counter <= 1) return false;
+        for(int i=0;i<counter-1;i++){
             Contact tmp = contacts[i];
-            for (int j=i+1;j<contacts.length;j++){
+            for (int j=i+1;j<counter;j++){
                 if (tmp.getPhone()==contacts[j].getPhone()) return true;
             }
         }

@@ -77,7 +77,6 @@ public class Main {
 
     private static String getCommand(Scanner in) {
         String input;
-
         input = in.nextLine().toUpperCase();
         return input;
     }
@@ -162,6 +161,7 @@ public class Main {
 	private static void getName(Scanner in, ContactBook cBook) {
         int number;
         number = in.nextInt();
+        in.nextLine();
         if (cBook.hasNumber(number)) {
             Contact c = cBook.getName(number);
             System.out.println(c.getName() + "; " + c.getEmail() + "; " + c.getPhone());
