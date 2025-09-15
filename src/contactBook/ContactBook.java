@@ -83,7 +83,7 @@ public class ContactBook {
         int result = -1;
         boolean found = false;
         while (i<counter && !found)
-            if (contacts[i].getPhone() = number)
+            if (contacts[i].getPhone() == number)
                 found = true;
             else
                 i++;
@@ -111,7 +111,6 @@ public class ContactBook {
     public Contact next() {
         return contacts[currentContact++];
     }
-
 
     public boolean checkSameContact() {
         for(int i=0;i<contacts.length;i++){
